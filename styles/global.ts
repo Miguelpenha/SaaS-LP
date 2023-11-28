@@ -8,7 +8,7 @@ export default createGlobalStyle`
         flex-direction: column;
         box-sizing: border-box;
         scroll-behavior: smooth;
-        font-family: 'Rubik', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     *::selection {
