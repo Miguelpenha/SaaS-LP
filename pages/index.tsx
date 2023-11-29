@@ -9,7 +9,7 @@ import LogoCompleteSource from '../public/img/Logo Complete.png'
 function Home() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [tel, setTel] = useState('')
+    const [whatsapp, setWhatsapp] = useState('')
 
     return <>
         <Head>
@@ -42,9 +42,9 @@ function Home() {
                     <span className="lighter"> e garanta seu imóvel com a melhor condição do ano</span>
                 </TextForm>
                 <Input onChange={ev => setName(ev.target.value)} type="text" name="name" id="name" required placeholder="Nome..."/>
-                <Input onChange={ev => setTel(ev.target.value)} type="tel" name="telephone" id="telephone" required placeholder="Whatsapp..."/>
+                <Input onChange={ev => setWhatsapp(ev.target.value)} type="tel" name="telephone" id="telephone" required placeholder="Whatsapp..."/>
                 <Input onChange={ev => setEmail(ev.target.value)} type="email" name="email" id="email" required placeholder="Email..."/>
-                <Button disabled={!name || !email || !tel} type="submit">Enviar</Button>
+                <Button disabled={!name || !whatsapp || !email} type="submit">Enviar</Button>
             </Form>
             <Description>Chegou a melhor chance para você viver ou investir em um dos destinos mais procurados e valorizados de Pernambuco: a Praia dos Carneiros. Mais um projeto inovador da DUE, que oferece um estilo de vida exclusivo, com infraestrutura moderna de lazer, serviço e design.</Description>
             <Image placeholder="blur" src={ImageSource} alt="Imagem"/>
