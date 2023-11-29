@@ -35,7 +35,7 @@ function Home() {
             </TextHeader>
         </Header>
         <Container>
-            <ImageMain src={ImageMainSource} alt="Imagem Principal"/>
+            <ImageMain placeholder="blur" src={ImageMainSource} alt="Imagem Principal"/>
             <Form id="form" action={process.env.NEXT_PUBLIC_URL_FORM_DATA} method="post">
                 <TextForm>
                     <span className="bold">Cadastre-se</span>
