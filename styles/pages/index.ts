@@ -180,6 +180,7 @@ export const PriceAbout = styled.h3`
     margin-top: 2em;
     align-self: center;
     padding: 0.1em 1em;
+    text-align: center;
     border-radius: 10px;
     border: 3px solid #f7c033;
 
@@ -195,6 +196,12 @@ export const PriceAbout = styled.h3`
 
     .bold {
         font-weight: bold;
+    }
+
+    @media screen and (max-width: 350px) {
+        span {
+            font-size: 0.85em;
+        }
     }
 `
 
