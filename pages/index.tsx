@@ -28,7 +28,7 @@ function Home() {
             <meta name="theme-color" content="#000000"/>
         </Head>
         <Header>
-            <LogoHeader src={LogoSource} alt="Logo"/>
+            <LogoHeader placeholder="blur" src={LogoSource} alt="Logo"/>
             <TextHeader>
                 <span className="bold">BLACK MARIA</span>
                 <span className="lighter"> - MELHOR CONDIÇÃO DO ANO</span>
@@ -47,7 +47,7 @@ function Home() {
                 <Button disabled={!name || !email || !tel} type="submit">Enviar</Button>
             </Form>
             <Description>Chegou a melhor chance para você viver ou investir em um dos destinos mais procurados e valorizados de Pernambuco: a Praia dos Carneiros. Mais um projeto inovador da DUE, que oferece um estilo de vida exclusivo, com infraestrutura moderna de lazer, serviço e design.</Description>
-            <Image src={ImageSource} alt="Imagem"/>
+            <Image placeholder="blur" src={ImageSource} alt="Imagem"/>
             <About>
                 <TitleAbout>
                     <span className="normal">Edf. Armando Rabelo: </span>
@@ -85,7 +85,7 @@ function Home() {
                 <ButtonRegister href="#form">Cadastre-se</ButtonRegister>
             </Register>
             <Footer>
-                <LogoFooter src={LogoCompleteSource} alt="Logo Completa"/>
+                <LogoFooter placeholder="blur" src={LogoCompleteSource} alt="Logo Completa"/>
             </Footer>
         </Container>
     </>
