@@ -87,11 +87,6 @@ export const Description = styled.div`
     background-color: ${props => props.theme.secondary};
 `
 
-export const Photo = styled(Image)`
-    width: 100%;
-    height: auto;
-`
-
 export const Footer = styled.footer`
     display: flex;
     padding: 3em 0em;

@@ -3,9 +3,9 @@ import Head from 'next/head'
 import page from '../services/page'
 import theme from '../styles/theme'
 import Header from '../components/Header'
-import { Container, ImageMain, Form, TextForm, Input, Button, Description, Photo, Footer, LogoFooter } from '../styles/pages'
+import { Container, ImageMain, Form, TextForm, Input, Button, Description, Footer, LogoFooter } from '../styles/pages'
 import ImageMainSource from '../public/img/Image Main.png'
-import PhotoSource from '../public/img/Photo.png'
+import Gallery from '../components/Gallery'
 import About from '../components/About'
 import Register from '../components/Register'
 import LogoCompleteSource from '../public/img/Logo Complete.png'
@@ -45,7 +45,7 @@ function Home() {
                 <Button disabled={!name || !whatsapp || !email} type="submit">Enviar</Button>
             </Form>
             <Description>{page.components.main.description}</Description>
-            <Photo placeholder="blur" src={PhotoSource} alt={page.alts.photo}/>
+            <Gallery/>
             <About/>
             <Register/>
             <Footer>

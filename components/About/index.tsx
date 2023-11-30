@@ -10,8 +10,8 @@ function About() {
             </Title>
             <Description>{page.components.main.about.description}</Description>
             <Attributes>
-                {page.components.main.about.attributes.map(attribute => (
-                    <Attribute>{attribute.normal}<span className="bold">{attribute.bold}</span></Attribute>
+                {page.components.main.about.attributes.map((attribute, index) => (
+                    <Attribute key={index}>{attribute.normal}<span className="bold">{attribute.bold}</span></Attribute>
                 ))}
             </Attributes>
             <Price>
