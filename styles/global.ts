@@ -4,19 +4,19 @@ export default createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
-        color: #000000;
         flex-direction: column;
         box-sizing: border-box;
         scroll-behavior: smooth;
-        font-family: 'Raleway', sans-serif;
+        color: ${props => props.theme.background};
+        font-family: ${props => props.theme.font.raleway};
     }
 
     *::selection {
-        background-color: #00000042;
+        background-color: ${props => props.theme.background};
     }
 
     body {
         display: flex;
-        background-color: #ffffff;
+        background-color: ${props => props.theme.color};
     }
 `
