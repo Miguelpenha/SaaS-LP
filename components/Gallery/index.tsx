@@ -3,6 +3,7 @@ import { Container, Photo } from './style'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/css/autoplay'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import PhotoSource from '../../public/img/Photo.png'
@@ -14,15 +15,15 @@ function Gallery() {
     return (
         <Container
             loop
-            autoplay={{
-                delay: 3000,
-                disableOnInteraction: true
-            }}
             navigation
             slidesPerView={1}
             pagination={{ clickable: true }}
             onSwiper={() => setLoaded(true)}
             modules={[Autoplay, Navigation, Pagination]}
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: true
+            }}
         >
             <SwiperSlide>
                 <Photo placeholder="blur" src={PhotoSource} alt={page.alts.gallery[0]}/>
