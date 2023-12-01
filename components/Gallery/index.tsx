@@ -6,9 +6,9 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import Photo1Source from '../../public/img/photos/Photo 1.jpg'
-import Photo2Source from '../../public/img/photos/Photo 2.jpg'
-import Photo3Source from '../../public/img/photos/Photo 3.jpg'
+import Photo1Source from '../../public/img/Photos/Photo 1.jpg'
+import Photo2Source from '../../public/img/Photos/Photo 2.jpg'
+import Photo3Source from '../../public/img/Photos/Photo 3.jpg'
 import page from '../../services/page'
 
 function Gallery() {
