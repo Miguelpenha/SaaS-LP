@@ -9,7 +9,6 @@ function Form() {
                 <span className="lighter">{page.components.main.form.title.lighter}</span>
             </Text>
             <Input type="text" name="name" id="name" required placeholder="Nome..."/>
-            <Input type="tel" name="telephone" id="telephone" required placeholder="Whatsapp..."/>
             <InputMask mask="(99) 9 9999-9999" maskChar="" type="tel" name="telephone" id="telephone" required placeholder="Whatsapp..."/>
             <Input type="email" name="email" id="email" required placeholder="Email..."/>
             <Button type="submit">Enviar</Button>
