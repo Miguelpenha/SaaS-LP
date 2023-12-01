@@ -8,7 +8,7 @@ const page: IPage = {
     alts: {
         logo: 'Logo Maria de Jesus',
         main: 'Imagem Principal',
-        photo: 'Photo',
+        gallery: ['Photo 1', 'Photo 2', 'Photo 3'],
         complete: 'Logo Completa'
     },
     components: {

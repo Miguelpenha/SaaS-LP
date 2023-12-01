@@ -6,7 +6,7 @@ interface IPage {
     alts: {
         logo: string
         main: string
-        photo: string
+        gallery: string[]
         complete: string
     }
     components: {

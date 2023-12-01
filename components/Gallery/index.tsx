@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { Container, Photo } from './style'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
@@ -8,22 +9,32 @@ import PhotoSource from '../../public/img/Photo.png'
 import page from '../../services/page'
 
 function Gallery() {
+    const [loaded, setLoaded] = useState(false)
+
     return (
         <Container
-            navigation={{  }}
+            loop
+            autoplay={{
+                delay: 3000,
+                disableOnInteraction: true
+            }}
+            navigation
             slidesPerView={1}
             pagination={{ clickable: true }}
-            modules={[Navigation, Pagination]}
+            onSwiper={() => setLoaded(true)}
+            modules={[Autoplay, Navigation, Pagination]}
         >
             <SwiperSlide>
-                <Photo placeholder="blur" src={PhotoSource} alt={page.alts.photo}/>
+                <Photo placeholder="blur" src={PhotoSource} alt={page.alts.gallery[0]}/>
             </SwiperSlide>
-            <SwiperSlide>
-                <Photo placeholder="blur" src={PhotoSource} alt={page.alts.photo}/>
-            </SwiperSlide>
-            <SwiperSlide>
-                <Photo placeholder="blur" src={PhotoSource} alt={page.alts.photo}/>
-            </SwiperSlide>
+            {loaded && <>
+                <SwiperSlide>
+                    <Photo placeholder="blur" src={PhotoSource} alt={page.alts.gallery[1]}/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Photo placeholder="blur" src={PhotoSource} alt={page.alts.gallery[2]}/>
+                </SwiperSlide>
+            </>}
         </Container>
     )
 }

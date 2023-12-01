@@ -12,6 +12,7 @@ export const Container = styled.header`
 
 export const Logo = styled(Image)`
     width: 1.6em;
+    height: auto;
     align-self: center;
 `
 
