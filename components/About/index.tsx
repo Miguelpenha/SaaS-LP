@@ -11,7 +11,9 @@ function About() {
             <Description>{page.components.main.about.description}</Description>
             <Attributes>
                 {page.components.main.about.attributes.map((attribute, index) => (
-                    <Attribute key={index}>{attribute.normal}<span className="bold">{attribute.bold}</span></Attribute>
+                    <Attribute key={index}>{attribute.normal}
+                        <span className="bold">{attribute.bold}</span>
+                    </Attribute>
                 ))}
             </Attributes>
             <Price>

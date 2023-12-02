@@ -16,9 +16,8 @@ function Gallery() {
 
     return (
         <Container
-            loop
             navigation
-            slidesPerView={1}
+            loop={loaded}
             pagination={{ clickable: true }}
             onSwiper={() => setLoaded(true)}
             modules={[Autoplay, Navigation, Pagination]}
@@ -27,14 +26,14 @@ function Gallery() {
                 disableOnInteraction: true
             }}
         >
-            <SwiperSlide>
+            <SwiperSlide key={1}>
                 <Photo placeholder="blur" src={Photo1Source} alt={page.alts.gallery[0]}/>
             </SwiperSlide>
             {loaded && <>
-                <SwiperSlide>
+                <SwiperSlide key={2}>
                     <Photo placeholder="blur" src={Photo2Source} alt={page.alts.gallery[1]}/>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide key={3}>
                     <Photo placeholder="blur" src={Photo3Source} alt={page.alts.gallery[2]}/>
                 </SwiperSlide>
             </>}
